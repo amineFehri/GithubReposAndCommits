@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name of the Repo</th>
+      <th>Avatar</th>
+      <th>Repo Creation Date</th>
+      <th>Language</th>
+      <th>Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="reposSearch$ | async as details">
+      <tr
+        *ngFor="
+          let repo of details | otherFilters : filterCriteria;
+          let i = index
+        "
+        style="cursor: pointer;"
+        (click)="navigateToCommits(repo.owner.login, repo.name)"
+      >
+        <td>{{ i + 1 }}</td>
+        <td>{{ repo.name }}</td>
+        <td>
+          <img [src]="repo.owner.avatarUrl" alt="Owner Avatar" class="avatar" />
+        </td>
+        <td>{{ repo.creationDate | date }}</td>
+        <td>{{ repo.language }}</td>
+        <td>{{ repo.stars }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<button (click)="loadMore()" class="btn btn-success show-more">Show More</button>

@@ -1,0 +1,19 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th >Author</th>
+      <th >URL</th>
+      <th >Message</th>
+    </tr>
+  </thead>
+  <tbody>
+      <ng-container *ngIf="commits$ | async as details">
+          <tr *ngFor="let commit of details">
+              <td>{{commit.author}}</td>
+              <td><a [href]="commit.url">{{commit.url}}</a></td>
+              <td>{{commit.message}}</td>
+            </tr>
+      </ng-container>
+  </tbody>
+</table>

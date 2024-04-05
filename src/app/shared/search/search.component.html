@@ -1,0 +1,22 @@
+  
+  <div>
+    
+    <div class="input-group mb-3">
+      <input
+        [(ngModel)]="searchValue"
+        id="search-query"
+        type="search"
+        name="q"
+        placeholder="Search repositories..."
+        class="form-control"
+      />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="search-button"
+        (click)="searchSubmit()"
+      > 
+      <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+<form [formGroup]="filterForm" (submit)="search()">
+    <div class="container d-flex justify-content-around">
+        <div class="form-floating mb-3">
+            <input formControlName="stars" type="number" class="form-control" id="floatingStarsInput" placeholder="Stars">
+            <label for="floatingStarsInput">Stars</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input formControlName="language" type="text" class="form-control" id="floatinganguageInput" placeholder="Language">
+            <label for="floatingLanguageInput">Language</label>
+        </div>
+        <button type="submit" class="btn btn-success search-btn">Filter</button>
+    </div>
+</form>

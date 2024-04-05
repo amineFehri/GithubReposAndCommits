@@ -1,0 +1,63 @@
+.fixTableHead { 
+    overflow-y: auto; 
+    height: 60vh; 
+  } 
+  .fixTableHead thead th { 
+    position: sticky; 
+    top: 0; 
+  } 
+  table { 
+    border-collapse: collapse;         
+    width: 100%; 
+  } 
+  th, 
+  td { 
+    border: 2px solid #4d504c; 
+  } 
+  th { 
+    background: #8da581; 
+  }
+
+.tableFixHead { 
+    table-layout: fixed; 
+    border-collapse: collapse; 
+  } 
+    .tableFixHead tbody { 
+    display: block; 
+    width: 100%; 
+    overflow: auto; 
+  } 
+  .tableFixHead thead tr { 
+    display: block; 
+  } 
+  .tableFixHead th, 
+  .tableFixHead  td { 
+    width: 200px; 
+  } 
+
+  .filters-container {
+    display: flex; 
+    vertical-align: middle;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  .filter {
+    margin-right: 20px; 
+  }
+  
+  .filter:last-child {
+    margin-right: 0; 
+  }
+  
+  .filter label {
+    display: inline;
+    margin-bottom: 5px;
+  }
+  
+  .filter input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; 
+  }

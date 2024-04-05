@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center mt-5">
+  <app-search (onReadyquery)="getQueryFilter($event)"></app-search>
+  <app-filter (onReadyCriteria)="getOtherFilters($event)"></app-filter>
+  <app-repo-list [queryFilter]="queryFilter" [filterCriteria]="otherFilter"></app-repo-list>
+</div>
+
+
+
+
